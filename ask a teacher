@@ -1,0 +1,36 @@
+import streamlit as st
+import pandas as pd
+
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+
+import os
+import markdown
+
+def _max_width_():
+    max_width_str = "max-width: 1000px;"
+    st.markdown(
+        f"""
+    <style>
+    .block-container {{
+        {max_width_str}
+        }}
+    .custom-widget {{
+        display: grid;
+        border: 1px solid black;
+        padding: 12px;
+        border-radius: 5%;
+        color: #003366;
+        margin-bottom: 5px;
+        min-height: 251.56px;
+        align-items: center;
+    }}
+    .row-widget.stCheckbox {{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px black;
+        border-radius: 3%;
+        height: 50px;
+        background-color: #DF1B88;
+        color: #FFFFFF;
